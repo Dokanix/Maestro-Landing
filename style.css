@@ -14,6 +14,7 @@
     padding: 0;
 }
 
+
 body {
     background-color: var(--complimentary-light-color);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -41,6 +42,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-right: 5px;
 }
 
 .logo span {
@@ -92,6 +94,7 @@ main {
 }
 
 .cta {
+    box-sizing: border-box;
     grid-area: cta;
     width: 100%;
     display: flex;
@@ -115,13 +118,15 @@ h1 {
 }
 
 .illustration {
+    box-sizing: border-box;
     grid-area: illustration;
+    width: 100%;
 }
 
 .illustration img {
+    box-sizing: border-box;
     width: 100%;
     position: relative;
-    left: 50px;
     top: 80px;
 }
 
@@ -168,7 +173,7 @@ form button {
     font-weight: bold;
     border-radius: 25px;
     background-color: var(--complimentary-color);
-    color: white;
+    color: var(--complimentary-light-color);
     margin-top: 20px;
 }
 
@@ -179,7 +184,7 @@ form button {
 }
 
 .separator .line {
-    border-bottom: 10px solid white;
+    border-bottom: 10px solid var(--complimentary-light-color);
     height: 8px;
     width: 100%;
     background-color: var(--main-color);
@@ -194,11 +199,12 @@ form button {
 }
 
 .video-section + .separator .line:first-child {
-    
+    border-top: 70px solid #E8C35F;
+    margin-top: -70px;
  }
 
 .video-section {
-    background: linear-gradient(-4deg, #E8C35F,  var(--main-color) 50%);
+    background: linear-gradient(-4deg, #E8C35F 30%, var(--main-color) 70%);
     margin-top: 50px;
     padding-top: 100px;
     padding-bottom: 200px;
@@ -213,7 +219,6 @@ form button {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 400px;
 }
 
 .video iframe {
@@ -223,13 +228,13 @@ form button {
 }
 
 .caption {
+    box-sizing: border-box;
     grid-area: caption;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-    height: 400px;
     padding-left: 20px;
 }
 
@@ -240,6 +245,20 @@ form button {
 
 .caption p {
     font-size: 40px;
+}
+
+footer {
+    margin-top: 200px;
+    height: 80px;
+    line-height: 80px;
+    font-weight: bold;
+    background-color: var(--main-light-color);
+    color: var(--complimentary-light-color);
+    text-align: center;
+}
+
+footer p {
+    width: 100%;
 }
 
 @media (max-width: 1640px) {
@@ -284,12 +303,16 @@ form button {
 }
 
 @media (max-width: 1015px) {
-    h1 {
-        font-size: 40px;
+    .landing-section {
+        margin-bottom: 100px;
     }
 
-    .separator {
-        margin-top: 100px;
+    .video-section {
+        padding-bottom: 50px;
+    }
+
+    h1 {
+        font-size: 40px;
     }
 
     .caption h2 {
@@ -302,9 +325,8 @@ form button {
     }
 
     .video-section {
-        background-color: var(--main-color);
         margin-top: 50px;
-        padding-top: 100px;
+        padding-top: 50px;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas: "video"
