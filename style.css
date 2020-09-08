@@ -253,7 +253,7 @@ footer {
     line-height: 80px;
     font-weight: bold;
     background-color: var(--main-light-color);
-    color: var(--complimentary-light-color);
+    color: var(--main-color);
     text-align: center;
 }
 
@@ -394,6 +394,10 @@ footer p {
         margin: 50px auto;
         width: 400px;
         height: 220px;
+    }
+
+    .video-section {
+        padding-bottom: 100px;
     }
 
     .caption h2 {
