@@ -308,7 +308,7 @@ footer p {
     }
 
     .video-section {
-        padding-bottom: 50px;
+        padding-bottom: 100px;
     }
 
     h1 {
@@ -369,10 +369,6 @@ footer p {
     .caption {
         height: auto;
         padding-bottom: 50px;
-    }
-
-    .video-section {
-        padding-bottom: 100px;
     }
 
     .caption h2 {
